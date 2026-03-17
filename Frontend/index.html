@@ -1,14 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/global.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Daily Manager</div>
+      <ul>
+        <li class="nav-links"><a href="index.html">Dashboard</a></li>
+        <li class="nav-links"><a href="habit.html">Habits</a></li>
+        <li class="nav-links"><a href="planner.html">Planner</a></li>
+        <li class="nav-links"><a href="notes.html">Notes</a></li>
+        <li class="nav-links"><a href="progress.html">Profress</a></li>
+        <li class="nav-links"><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="container">
+      <header class="page-header fade-in">
+        <h1 class="greeting -msg">Good Morning</h1>
+        <p class="curr-date">Today is...</p>
+      </header>
+      <!-- STARTING -->
+      <section class="card-container">
+        <div class="card cards">
+          <h2>Total Habits</h2>
+          <h3>0</h3>
+          <p>You have 2 habits in progress</p>
+          <button class="btn">+ Add habits</button>
+        </div>
+        <div class="card cards">
+          <h2 id="mid">Completed Habits</h2>
+          <h3 id="p2">0</h3>
+          <p>You have completed 2 habits</p>
+          <button class="btn mid-btn">View habits</button>
+        </div>
+        <div class="card cards">
+          <h2>Total Task Today</h2>
+          <h3>0</h3>
+          <p>You have completed 3 task out of 5</p>
+          <button class="btn">+ Add task</button>
+        </div>
+      </section>
+
+      <!-- SECOND -->
+
+      <section class="bottom-section">
+        <!-- Today's Tasks -->
+        <div class="card tasks">
+          <div class="card-header">
+            <h3>Today's Tasks</h3>
+          </div>
+
+          <div class="task-item completed">
+            <input type="checkbox" class="checkbox" />
+            <div>
+              <p class="task-title">Review quarterly report</p>
+              <span class="task-status task-desc">Completed</span>
+            </div>
+            <span class="task-time t1">1:00 PM</span>
+          </div>
+
+          <div class="task-item">
+            <input type="checkbox" class="checkbox" />
+            <div>
+              <p class="task-title">Write a blog post</p>
+              <span class="task-desc">Outline the main points</span>
+            </div>
+            <span class="task-time t2">3:00 PM</span>
+          </div>
+
+          <div class="task-item">
+            <input type="checkbox" class="checkbox" />
+            <div>
+              <p class="task-title">Go grocery shopping</p>
+              <span class="task-desc">Stretching</span>
+            </div>
+            <span class="task-time t3">5:00 PM</span>
+          </div>
+
+          <button class="btns primary">+ Add New Task</button>
+        </div>
+
+        <!-- Habit Overview -->
+        <div class="card habits">
+            <div class="card-header">
+                <h3>Habit Overview</h3>
+              </div>
+          <div class="content">
+            <div>
+              
+              <h2>4 / 6 <span>Habits Completed</span></h2>
+              <p class="percent">67% completion</p>
+
+              <div class="habit-item completed">
+                <span> ✔</span>
+                <p>Drink 8 glasses of water</p>
+              </div>
+
+              <div class="habit-item completed">
+                <span> ✔</span>
+                <p>Read for 30 minutes</p>
+              </div>
+
+              <div class="habit-item pending">
+                <span>⏳</span>
+                <p>Wake up at 6:00 AM</p>
+              </div>
+            </div>
+            <div class="img">
+              <img src="image.png" alt="" />
+            </div>
+          </div>
+
+          <button class="btns secondary">Manage Habits</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/global.js"></script>
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

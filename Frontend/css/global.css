@@ -2,10 +2,10 @@
 
 :root {
     /* Define primary colors and theme variables */
-    --primary: #6366f1;
+    --primary: #6366F1;
     --primary-hover: #4f46e5;
-    --secondary: #8b5cf6;
-    --bg-color: #f8fafc;
+    --secondary: #2FAE7A;
+    --bg-color: #F5F7FB;
     --text-color: #0f172a;
     --text-muted: #64748b;
     --card-bg: #ffffff;
@@ -46,14 +46,19 @@ body {
     z-index: 100;
 }
 
-.navbar .logo {
+.logo {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 12px;
 }
 
 .nav-links {
@@ -81,7 +86,7 @@ body {
 .container {
     flex: 1;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1.5rem;
 }
@@ -147,10 +152,10 @@ textarea:focus {
 }
 
 button {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--secondary);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 0.625rem 1.3rem;
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
