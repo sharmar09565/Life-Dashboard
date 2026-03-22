@@ -1,0 +1,115 @@
+.notes-input-card {
+    margin-bottom: 24px;
+}
+
+.notes-input-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notes-input-row textarea {
+    flex: 1;
+    min-height: 110px;
+    resize: vertical;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.notes-input-row button {
+    min-width: 150px;
+    height: 58px;
+    background: var(--primary);
+}
+
+.notes-input-row button:hover {
+    background: var(--primary-hover);
+}
+
+/* My Notes */
+.my-notes-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.my-notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.my-notes-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.notes-list {
+    padding: 0;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.note-item:last-child {
+    border-bottom: none;
+}
+
+.note-item:hover {
+    background-color: #f8fafc;
+}
+
+.note-text h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.note-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.action-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background: #e0e7ff;
+    color: var(--primary);
+}
+
+.edit-btn:hover {
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25);
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: var(--danger);
+}
+
+.delete-btn:hover {
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+}
+
+

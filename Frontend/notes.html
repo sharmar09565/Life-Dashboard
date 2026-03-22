@@ -1,15 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <link rel="stylesheet" href="css/notes.css">
-    <link rel="stylesheet" href="css/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Notes</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/notes.css">
 </head>
 <body>
-    
-    <script src="js/global.js"></script>
-    <script src="js/notes.js"></script>
+
+  <nav class="navbar">
+    <div class="logo">Daily Manager</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="habit.html">Habits</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="#" class="active">Notes</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Quick Notes</h1>
+      <p>Jot down your thoughts, ideas, or reminders.</p>
+    </div>
+
+    <!-- Add Note Section -->
+    <section class="card notes-input-card">
+      <div class="notes-input-row">
+        <textarea placeholder="Write your note here..."></textarea>
+        <button>Save Note</button>
+      </div>
+    </section>
+
+    <!-- My Notes Section -->
+    <section class="card my-notes-card">
+      <div class="my-notes-header">
+        <h2>My Notes</h2>
+        <button class="danger">Clear All</button>
+      </div>
+
+      <div class="notes-list">
+
+        <div class="note-item">
+          <div class="note-text">
+            <h3>Remember to call Mark in the afternoon</h3>
+            <p>Added: Apr 24, 2024, 1:45 PM</p>
+          </div>
+          <div class="note-actions">
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <div class="note-text">
+            <h3>Buy groceries: milk, bread, eggs, and chicken</h3>
+            <p>Added: Apr 24, 2024, 11:30 AM</p>
+          </div>
+          <div class="note-actions">
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <div class="note-text">
+            <h3>Brainstorm ideas for the upcoming presentation</h3>
+            <p>Added: Apr 24, 2024, 9:00 AM</p>
+          </div>
+          <div class="note-actions">
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <div class="note-text">
+            <h3>Plan trip itinerary for this weekend</h3>
+            <p>Added: Apr 23, 2024, 10:15 AM</p>
+          </div>
+          <div class="note-actions">
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="js/global.js"></script>
+  <script src="js/notes.js"></script>
 </body>
 </html>

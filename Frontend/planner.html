@@ -1,15 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planner</title>
-    <link rel="stylesheet" href="css/planner.css">
-    <link rel="stylesheet" href="css/global.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Planner</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/planner.css" />
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Daily Manager</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="habit.html">Habits</a></li>
+      <li><a href="#" class="active">Planner</a></li>
+      <li><a href="notes.html">Notes</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Header -->
+    <div class="page-header">
+      <h1>Daily Planner</h1>
+      <p>Organize your day with a simple schedule planner.</p>
+    </div>
+
+    <!-- Add Task Section -->
+    <section class="card planner-box">
+      <div class="input-group">
+        <input type="text" placeholder="What do you need to do?" />
+        <input type="time" placeholder="Enter task time" />
+        <button>Add Task</button>
+      </div>
+    </section>
+
+    <!-- My Tasks Section -->
+    <section class="card tasks-section">
+      <div class="tasks-header">
+        <h2>My Tasks</h2>
+        <button class="danger">Clear All</button>
+      </div>
+
+      <div class="task-list">
+        <div class="task-item">
+          <div class="task-left">
+            <input type="checkbox" />
+            <span class="task-dot purple"></span>
+            <p>Morning workout</p>
+          </div>
+          <span class="task-time">7:00 AM</span>
+        </div>
+
+        <div class="task-item">
+          <div class="task-left">
+            <input type="checkbox" />
+            <span class="task-dot blue"></span>
+            <p>Team meeting</p>
+          </div>
+          <span class="task-time">10:00 AM</span>
+        </div>
+
+        <div class="task-item">
+          <div class="task-left">
+            <input type="checkbox" />
+            <span class="task-dot yellow"></span>
+            <p>Work on project report</p>
+          </div>
+          <span class="task-time">2:00 PM</span>
+        </div>
+
+        <div class="task-item">
+          <div class="task-left">
+            <input type="checkbox" />
+            <span class="task-dot pink"></span>
+            <p>Call the client</p>
+          </div>
+          <span class="task-time">4:00 PM</span>
+        </div>
+
+        <div class="task-item">
+          <div class="task-left">
+            <input type="checkbox" />
+            <span class="task-dot green"></span>
+            <p>Grocery shopping</p>
+          </div>
+          <span class="task-time">5:30 PM</span>
+        </div>
+      </div>
+    </section>
 
     <script src="js/global.js"></script>
     <script src="js/planner.js"></script>
+  </main>
 </body>
 </html>

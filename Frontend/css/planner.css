@@ -1,0 +1,107 @@
+/* Planner page styling */
+
+.planner-box {
+    margin-bottom: 2rem;
+}
+.card:hover{
+    transform: none;
+    box-shadow: var(--card-shadow);
+}
+.tasks-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tasks-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.task-list {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: #f8fafc;
+    transition: var(--transition);
+}
+
+.task-item:hover {
+    background: #eef2ff;
+    transform: translateX(4px);
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.task-left p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.task-left input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--secondary);
+    cursor: pointer;
+}
+
+.task-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Dot colors */
+.purple {
+    background: #a78bfa;
+}
+
+.blue {
+    background: #60a5fa;
+}
+
+.yellow {
+    background: #facc15;
+}
+
+.pink {
+    background: #f472b6;
+}
+
+.green {
+    background: #4ade80;
+}
+
+.task-time {
+    background: #e0e7ff;
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input-group button{
+    background-color: var(--primary);
+}
