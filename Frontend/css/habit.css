@@ -11,7 +11,7 @@
 
 .add-habits input{
     height: 42px;
-    width: 900px;
+    width: 830px;
 }
 .add-habits input::placeholder{
     opacity: .6;
@@ -150,21 +150,7 @@
   color: #9ca3b8;
 }
 
-.clear-wrap {
-  display: flex;
-  justify-content: center;
-  padding: 12px 18px;
-  background: #F5F7FB;
-}
 
-.clear-btn {
-  background: #f3f4fa;
-  color: #7c859d;
-  padding: 14px 26px;
-  border-radius: 14px;
-  font-size: 1rem;
-  font-weight: 500;
-}
 
 .clear-btn:hover {
   background: #e7eaf4;
