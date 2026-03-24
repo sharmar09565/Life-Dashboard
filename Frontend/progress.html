@@ -1,15 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress</title>
-    <link rel="stylesheet" href="css/progress.css">
-    <link rel="stylesheet" href="css/global.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/progress.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Daily Manager</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="habit.html">Habits</a></li>
+        <li><a href="#" >Planner</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="progress.html" class="active">Progress</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <div class="page-header">
+        <h1>Your Progress</h1>
+        <p>See how well you're doing today.</p>
+      </div>
+
+      <section class="card progress-card">
+        <h2>Habits Completion</h2>
+
+        <div class="progress-circle-wrapper">
+          <div class="progress-circle">
+            <span>0%</span>
+          </div>
+        </div>
+
+        <p class="progress-note">0 / 0 Completed</p>
+      </section>
+
+      <section class="card tasks-card">
+        <h2>Tasks Scheduled Today</h2>
+
+        <div class="tasks-count">0 Total Tasks</div>
+        <p class="tasks-note">Keep up the momentum!</p>
+      </section>
+    </main>
+
     <script src="js/global.js"></script>
     <script src="js/progress.js"></script>
-</body>
+  </body>
 </html>

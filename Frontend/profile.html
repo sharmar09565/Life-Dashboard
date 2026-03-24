@@ -1,15 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/global.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Daily Manager</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="habit.html">Habits</a></li>
+        <li><a href="#" >Planner</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="page-header">
+        <h1>Your Profile</h1>
+        <p>Manage your details and main goals.</p>
+      </div>
+
+      <section class="profile-top card">
+        <div class="profile-avatar">U</div>
+
+        <div class="profile-details">
+          <h2>User</h2>
+          <p><strong>Main Goal:</strong> Stay productive!</p>
+          <p><strong>Bio:</strong> No bio added yet.</p>
+        </div>
+      </section>
+
+      <section class="card profile-form-card">
+        <h2>Edit Info</h2>
+
+        <form class="profile-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              value="User"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="goal">Main Goal</label>
+            <input
+              type="text"
+              id="goal"
+              placeholder="Enter your main goal"
+              value="Stay productive!"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Short Bio</label>
+            <textarea
+              id="bio"
+              rows="5"
+              placeholder="Tell us something about yourself"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="save-btn">Save Profile</button>
+        </form>
+      </section>
+    </main>
     <script src="js/global.js"></script>
     <script src="js/profile.js"></script>
-</body>
+  </body>
 </html>

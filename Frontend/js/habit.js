@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {       // js run only after page(html) get loaded
     let habits = window.loadData('dlm_habits', []);
-    
+
     const habitInput = document.getElementById("habit-input");
     const addHabitBtn = document.getElementById("add-btn");
     const habitsList = document.getElementById("habits-list");
@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
 
         function renderHabits() {
             habitsList.innerHTML = "";
-            habits.forEach((habit, index) => {
+            habits.forEach((habit,index) => {
                 const li = document.createElement("li");
                 li.className = "table-row";
-                
+
                 li.innerHTML = `
                     <div class="col habit-col habit-info">
                       <span class="habit-name">${habit.title}</span>
@@ -55,23 +55,25 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
             }
         });
 
-        
+
         habitsList.addEventListener("click", (e) => {       //e-event object
             const index = e.target.getAttribute("data-index");
             if (index === null) return;
 
             if (e.target.tagName === "INPUT") {
-              
+
                 habits[index].completed = e.target.checked;
                 window.saveData('dlm_habits', habits);
                 renderHabits();
             } else if (e.target.tagName === "BUTTON") {
-                
+
                 habits.splice(index, 1);
                 window.saveData('dlm_habits', habits);
                 renderHabits();
             }
         });
+
+        
     }
-    
+
 });

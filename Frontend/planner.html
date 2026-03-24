@@ -32,9 +32,9 @@
     <!-- Add Task Section -->
     <section class="card planner-box">
       <div class="input-group">
-        <input type="text" placeholder="What do you need to do?" />
-        <input type="time" placeholder="Enter task time" />
-        <button>Add Task</button>
+        <input type="text" placeholder="What do you need to do?" id="task-input" />
+        <input type="time" placeholder="Enter task time" id="time-input"/>
+        <button id="add-task-btn">Add Task</button>
       </div>
     </section>
 
@@ -45,17 +45,17 @@
         <button class="danger">Clear All</button>
       </div>
 
-      <div class="task-list">
-        <div class="task-item">
+      <ul class="task-list" id="task-list">
+        <!-- <div class="task-item">
           <div class="task-left">
             <input type="checkbox" />
             <span class="task-dot purple"></span>
             <p>Morning workout</p>
           </div>
           <span class="task-time">7:00 AM</span>
-        </div>
+        </div> -->
 
-        <div class="task-item">
+        <!-- <div class="task-item">
           <div class="task-left">
             <input type="checkbox" />
             <span class="task-dot blue"></span>
@@ -89,8 +89,8 @@
             <p>Grocery shopping</p>
           </div>
           <span class="task-time">5:30 PM</span>
-        </div>
-      </div>
+        </div> -->
+      </ul>
     </section>
 
     <script src="js/global.js"></script>

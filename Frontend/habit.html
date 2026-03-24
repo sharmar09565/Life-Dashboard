@@ -25,19 +25,19 @@
         <h1 class="greeting-msg" id="greeting-msg">Daily Habits</h1>
         <p id="curr-date">Track your routines to build better habits</p>
       </header>
-      <section class="add-habits">
-        <input id="habit-input"
+      <form class="add-habits">
+        <input
+          id="habit-input"
           type="text"
           name="username"
           placeholder="Enter a new habit (e.g.,Read Books)"
         />
-        <button class="btn add-btn" id="add-btn">Add Habit</button>
-      </section>
+        <button class="btn add-btn" id="add-btn" type="submit">Add Habit</button>
+      </form>
       <section class="my-habits">
         <div class="habits-card">
           <div class="habits-header">
             <h2>My Habits</h2>
-            <!-- <button class="more-btn">•••</button> -->
           </div>
 
           <div class="habits-table">
@@ -53,21 +53,21 @@
               <div class="col option-col">Options</div>
             </div>
             <ul id="habits-list">
-            <div class="table-row">
-              <div class="col habit-col habit-info">
-                <span class="habit-name">Drink water</span>
+              <div class="table-row">
+                <div class="col habit-col habit-info">
+                  <span class="habit-name">Drink water</span>
+                </div>
+                <div class="col day-col"><input type="checkbox" checked /></div>
+                <div class="col day-col"><input type="checkbox" /></div>
+                <div class="col day-col"><input type="checkbox" /></div>
+                <div class="col day-col"><input type="checkbox" /></div>
+                <div class="col day-col"><input type="checkbox" /></div>
+                <div class="col day-col"><input type="checkbox" /></div>
+                <div class="col day-col"><input type="checkbox" /></div>
+                <div class="col option-col">
+                  <button class="dots-btn">•••</button>
+                </div>
               </div>
-              <div class="col day-col"><input type="checkbox" checked /></div>
-              <div class="col day-col"><input type="checkbox" /></div>
-              <div class="col day-col"><input type="checkbox" /></div>
-              <div class="col day-col"><input type="checkbox" /></div>
-              <div class="col day-col"><input type="checkbox" /></div>
-              <div class="col day-col"><input type="checkbox" /></div>
-              <div class="col day-col"><input type="checkbox" /></div>
-              <div class="col option-col">
-                <button class="dots-btn">•••</button>
-              </div>
-            </div>
             </ul>
           </div>
         </div>
