@@ -18,13 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
                     <div class="col habit-col habit-info">
                       <span class="habit-name">${habit.title}</span>
                     </div>
-                    <div class="col day-col"><input type="checkbox" /></div>
-                    <div class="col day-col"><input type="checkbox" /></div>
-                    <div class="col day-col"><input type="checkbox" /></div>
-                    <div class="col day-col"><input type="checkbox" /></div>
-                    <div class="col day-col"><input type="checkbox" /></div>
-                    <div class="col day-col"><input type="checkbox" /></div>
-                    <div class="col day-col"><input type="checkbox" /></div>
+                
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    <input type="checkbox" class="col day-col checkbox"/>
+                    
+                    <div class="col percent-col">
+                        <span class="percent-badge">0%</span>
+                    </div>
                     <div class="col option-col">
                       <button class="dots-btn" >•••</button>
                     </div>
@@ -73,6 +78,24 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
             }
         });
 
+        let allCheckBox = document.getElementsByClassName("checkbox");
+        
+        for(let i=0;i<allCheckBox.length;i++){
+            allCheckBox[i].addEventListener("click", (e)=>{
+                
+                let parent = e.target.parentNode;
+                let checkBox = parent.getElementsByClassName("checkbox");
+                let count = 0;
+                for(let i=0;i<checkBox.length;i++){
+                    if(checkBox[i].checked){
+                        count++;
+                    }
+                }
+                let percent = Math.floor((count/7)*100);
+                console.log(percent);
+                parent.getElementsByClassName("percent-col")[0].innerHTML = `<span class="percent-badge">${percent}%</span>`;
+            });
+        }
         
     }
 
