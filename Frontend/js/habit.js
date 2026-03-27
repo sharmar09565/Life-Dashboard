@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
                         <span class="percent-badge">0%</span>
                     </div>
                     <div class="col option-col">
-                      <button class="dots-btn" >•••</button>
+                      <button class="danger">Delete</button>
                     </div>
                 `;
                 habitsList.appendChild(li);
@@ -62,6 +62,15 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
 
 
         habitsList.addEventListener("click", (e) => {       //e-event object
+
+            if(e.target.classList.contains("danger")){
+                let index = e.target.dataset.index;
+                habits.splice(index,1);
+                window.saveData('dlm_habits',habits);
+                renderHabits();
+            }
+
+
             const index = e.target.getAttribute("data-index");
             if (index === null) return;
 
