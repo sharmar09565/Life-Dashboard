@@ -13,65 +13,71 @@
       <ul class="nav-links">
         <li><a href="index.html">Dashboard</a></li>
         <li><a href="habit.html">Habits</a></li>
-        <li><a href="#" >Planner</a></li>
+        <li><a href="#">Planner</a></li>
         <li><a href="notes.html">Notes</a></li>
         <li><a href="progress.html">Progress</a></li>
         <li><a href="profile.html" class="active">Profile</a></li>
       </ul>
     </nav>
-    <main class="container">
-      <div class="page-header">
-        <h1>Your Profile</h1>
-        <p>Manage your details and main goals.</p>
+    <header class="page-header fade-in">
+        <h1 class="greeting-msg" id="greeting-msg">Your Profile</h1>
+        <p id="curr-date">Manage your profile</p>
+      </header>
+    <section class="hero">
+      
+      <div class="img">
+        <img
+          src="https://i.pinimg.com/736x/89/7a/5e/897a5e6b0b6f0dae2a6cbb4657bd99cf.jpg"
+          alt=""
+        />
       </div>
+      <div class="profile-main">
+        <div class="form-card">
+          <div class="form-section-title">
+            <h2>Personal Information</h2>
+          </div>
 
-      <section class="profile-top card">
-        <div class="profile-avatar">U</div>
-
-        <div class="profile-details">
-          <h2>User</h2>
-          <p><strong>Main Goal:</strong> Stay productive!</p>
-          <p><strong>Bio:</strong> No bio added yet.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="input-name">Full Name</label><br />
+              <input type="text" id="input-name" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="input-username">Username</label><br />
+              <input
+                type="text"
+                id="input-username"
+                placeholder="Enter Username"
+              />
+            </div>
+            <div class="form-group full-width">
+              <label for="input-goal">Personal Goal</label><br />
+              <input
+                type="text"
+                id="input-goal"
+                placeholder="e.g. Build better habits every day"
+              />
+            </div>
+            <div class="form-group">
+              <label for="input-email">Email</label><br />
+              <input type="email" id="input-email" placeholder="e.g. host@email.com"/>
+            </div>
+          </div>
+          <button id="change-btn">Edit Profile</button>
         </div>
-      </section>
 
-      <section class="card profile-form-card">
-        <h2>Edit Info</h2>
+      </div>
+    </section>
 
-        <form class="profile-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-              value="User"
-            />
-          </div>
+    <section class="collections">
+      <div class="btns">
+        <button class="btn1 active">Habits</button>
+        <button class="btn2">Task</button>
+        <button class="btn3">Notes</button>
+      </div>
+      <div class="list"></div>
+    </section>
 
-          <div class="form-group">
-            <label for="goal">Main Goal</label>
-            <input
-              type="text"
-              id="goal"
-              placeholder="Enter your main goal"
-              value="Stay productive!"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="bio">Short Bio</label>
-            <textarea
-              id="bio"
-              rows="5"
-              placeholder="Tell us something about yourself"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="save-btn">Save Profile</button>
-        </form>
-      </section>
-    </main>
     <script src="js/global.js"></script>
     <script src="js/profile.js"></script>
   </body>
