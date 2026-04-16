@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         renderNotes();
 
-        addNotesBtn.addEventListener("click", ()=>{
+        function addNotes(){
             const title = notesInput.value.trim();
 
             if(title){
@@ -35,9 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 notesInput.value = "";
                 renderNotes();
             }
-        });
+        }
+        addNotesBtn.addEventListener("click", addNotes);
 
-        
+        notesList.addEventListener("click", (e)=>{
+            if(e.target.classList.contains("delete-btn")){
+                let index = e.target.dataset.index;
+                notes.splice(index,1);
+                window.saveData('dlm_habits',notes);
+                renderNotes();
+            }
+        })
+
+        notesInput.addEventListener("keydown",(e)=>{
+            if(e.key=='Enter'){
+                addNotes();
+            }
+        })
 
     }
 })

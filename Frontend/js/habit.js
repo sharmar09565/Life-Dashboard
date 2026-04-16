@@ -50,15 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {       // js run only after
             }
         });
 
-        addHabitBtn.addEventListener("click", () => {
-            const title = habitInput.value.trim();
-            if (title) {
-                habits.push({ title, completed: false });
-                window.saveData('dlm_habits', habits);
-                habitInput.value = "";
-                renderHabits();
-            }
-        });
 
 
         habitsList.addEventListener("click", (e) => {       //e-event object
